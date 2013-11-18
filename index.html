@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>In Page Viewer</title>
+	<link href="css/site.css" rel="stylesheet">
+
+	<style>
+		#navigation ul, #navigation li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			}
+		#navigation a {
+			background-color: rgba(22,55,92,1);
+			text-decoration: none;
+			font: 16px Arial, sans-serif;
+			text-indent: 10px;
+			border-top: 1px solid #ccc;
+			border-left:1px solid #ccc;
+			border-right:1px solid #999;
+			border-bottom:1px solid #999;
+			margin: 0px;
+			padding: 0px;
+			color: rgba(111,127,160,1);
+			}
+		#navigation a:hover {
+			border-top:1px solid #999;
+			border-left:1px solid #999;
+			border-right:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			background-color: #555;
+			color: white;
+		}
+		#navigation .stack > a {
+			background-image: url(images/arrow.png);
+			background-repeat: no-repeat;
+			background-position: 97% 8px;
+		}
+		#navigation .stack > a:hover {
+			background-position: 97% -78px;
+		}
+		#navigation ul .stack > a {
+			background-position: 97% -21px;
+		}
+		#navigation ul .stack > a:hover {
+			background-position: 97% -54px;
+		}
+	</style>
+
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/nav1.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	 $("#navigation").navPlugin({
+	   'itemWidth': 150,
+	   'itemHeight': 30,
+	   'navEffect': "slide",
+	   'speed': 250
+	 });
+	}); // end ready
+	</script>
+</head>
+
+<body>
+  <div class="content">
+    <div class="main">
+      <h1>Navigation Menu</h1>
+      <ul id="navigation" >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#">Location</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Services</a>
+          <ul>
+            <li><a href="#">Plan</a>
+              <ul>
+                <li><a href="#">Information Architecture</a></li>
+                <li><a href="#">Content Strategy</a></li>
+                <li><a href="#">Marketing Strategy</a></li>
+                <li><a href="#">Domain & Hosting</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Create </a>
+              <ul>
+                <li><a href="#">User Interface Design</a></li>
+                <li><a href="#">Copywriting</a></li>
+                <li><a href="#">Layout</a>
+                  <ul>
+                    <li><a href="#">Multi Page</a></li>
+                    <li><a href="#">Single Page</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Develop</a></li>
+          </ul>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+  </div>
+</body>
+</html>
